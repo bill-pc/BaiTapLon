@@ -1,0 +1,57 @@
+.mycontent {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.infoUser {
+    border: 1px solid #ccc;
+    width: 1220px;
+    background-color: #f9f9f9;
+}
+
+.infoUser table {
+    width: 100%;
+}
+
+.infoUser th {
+    background-color: #eee;
+}
+
+.infoUser td {
+    padding: 5px;
+}
+
+.infoUser input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+.infoUser i {
+    cursor: pointer;
+    color: blue;
+}
+
+.infoUser hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
