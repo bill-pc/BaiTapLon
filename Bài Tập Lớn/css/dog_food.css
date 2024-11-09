@@ -1,0 +1,165 @@
+body{
+    font-family: Arial;
+}
+.active{
+    border-bottom: 3px solid white;
+}
+/* header */
+header{
+    min-height: 400px;
+    height: 400px;
+}
+.carousel-item{
+    height: 450px;
+}
+/* .bg-ul {
+    background-color: rgba(0, 0, 0, 0.7);
+} */
+.navbar{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+}
+#navbarNav{
+    width: 70%;
+}
+.navbar-brand{
+    width: 30%;
+}
+#logo {
+    width: 50%; 
+    max-width: 50%; 
+    height: auto; 
+}
+
+header .nav-link{
+    font-size: 17px;
+    color: grey;
+}
+.navbar .navbar-nav .nav-item:hover>.nav-link{
+    color: white;
+}
+.dropdown-menu{
+    background-color: white;
+}
+#icon-mouse{
+    width: 18px;
+    height: auto;
+}
+
+.btn-search-custom{
+    border-radius: 30px;
+}
+/* end header */
+
+ /* container img animals */
+
+.container .img-animals img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 70px 30px;
+ }
+
+#active-img{
+    width: 150px;
+    height: 150px;
+ }
+.img-animals a{
+    text-align: center;
+    text-decoration: none;
+    color: #5a3e36;
+}
+.img-animals a p{
+    margin-top: -10px;
+    font-size: 20px;
+}
+.img-animals a:hover>img{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+.img-animals a:hover>p{
+    color: blue;
+}
+/* container product */
+.card:hover {
+    transform: scale(1.05); 
+    transition: transform 0.3s ease-in-out; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    font-weight: 500;
+} 
+.icon-img-3 {
+    height: 30px;
+    margin-left: 20px;
+}
+.icon-rating {
+    width: 18px;
+    height: 18px;
+    margin-bottom: 8px;
+    margin-left: 5px;
+    margin-right: 40px;
+}
+#icon-shopping button {
+    border: none;
+    background-color: white;
+}
+#icon-shopping button i{
+    font-size: 30px;
+}
+#icon-shopping button:hover>i{
+    text-shadow: 2px 2px 3px grey;
+}
+.price{
+    color: red;
+    font-weight: 500;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.container .title{
+    font-weight: 700;
+}
+/* end container product */
+
+/* container thông tin về chó */
+.container #img-info-animal-1,
+.container #img-info-animal-2{
+    width: 70%;
+    height: 250px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.container .title-info{
+    height: auto;
+    width: 100%;
+    padding: 20px 20px;
+    background-image: url(../img/bg-2.png);
+    background-size: cover;
+    border-radius: 10px;
+}
+/* ------footer */
+footer{
+    margin-top: 70px;
+    background-image: url(../img/bg-footer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 250px;
+    height: auto;
+}
+footer .title{
+    margin-top: 50px;
+}
+footer .title p,
+footer .title a{
+    color: white;
+    font-weight: lighter;
+}
+footer #icon-mxh{
+    font-size: 25px;
+    color: white;
+}
+footer .nav-item{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/* end footer */

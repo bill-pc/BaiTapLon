@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style_giohang.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style_home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- thư viện icon -->
+</head>
+
+<body>
+    <!-------------------------------------------- header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="../img/Logo.png" alt="Logo" id="logo">
+                </a>
+                <!-- Nút collapse -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menu -->
+                <div class="collapse navbar-collapse order-lg-1" id="navbarNav">
+                    <ul class="navbar-nav  ">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Trang chủ.html">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/Tin tức.html">Tin tức</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                                Danh mục sản phẩm
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="../html/Thức ăn chó.html">
+                                        <i class="fa-solid fa-dog me-2"></i> Thức ăn chó
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../html/Thức ăn mèo.html">
+                                        <i class="fa-solid fa-cat me-2"></i> Thức ăn mèo
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../html/Thức ăn chuột.html">
+                                        <img src="../img/mouse.png" alt="" id="icon-mouse" class="me-2"> Thức ăn chuột
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../html/Thức ăn cá.html">
+                                        <i class="fa-solid fa-fish me-2"></i> Thức ăn cá
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../html/Thức ăn chim.html">
+                                        <i class="fa-solid fa-dove me-2"></i> Thức ăn chim
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./login.html">Đăng nhập</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./register.html">Đăng kí</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../html/cart.html">Giỏ hàng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/user.html">Người dùng</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Ô tìm kiếm-->
+                <div class="d-flex order-lg-2">
+                    <div class="input-group">
+                        <input type="text" name="search" id="search" class="form-control btn-search-custom" placeholder="Tìm kiếm...">
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="carouselExampleControls-2" class="carousel slide" data-ride="carousel" data-interval="2000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../img/bg-header1.png" class="d-block w-100 img-hder" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/bg-header2.png" class="d-block w-100 img-hder" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/bg-header3.jpg" class="d-block w-100 img-hder" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/bg-header4.jpg" class="d-block w-100 img-hder" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+    <main role="main">
+        <div class="container mt-4">
+            <div id="thongbao" class="alert alert-danger d-none face" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+            </div>
+
+            <h1 class="text-center">Giỏ hàng</h1>
+            <div class="row">
+                <div class="col col-md-12">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Ảnh sản phẩm</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Số lượng</th>
+                                <th>Đơn giá</th>
+                                <th>Thành tiền</th>
+                                <th>Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody id="datarow">
+
+                        </tbody>
+                    </table>
+
+                    <a href="Trang chủ.html" class="btn btn-warning btn-md">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;Quay về trang chủ</a>
+                    <a class="btn btn-primary btn-md" id="btnthanhtoan" onclick="openPaymentBox()">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Thanh toán</a>
+                </div>
+            </div>
+    </main>
+    <div id="paymentSuccess" class="overlay">
+        <div class="payment-box">
+            <span class="close-btn" onclick="closePaymentBox()">&times;</span>
+            <h2 class="text-success">Thanh Toán Thành Công</h2>
+            <p>Cảm ơn bạn đã thanh toán thành công!</p>
+            <a class="btn btn-primary btn-md" id="btnthanhtoan" onclick="closePaymentBox()">
+				Xác nhận</a>
+        </div>
+    </div>
+
+    <footer class="container-fluid">
+        <div class="row text-center row-cols-2 row-cols-md-4">
+            <div class="title col-md-3">
+                <div class="d-flex flex-column">
+                    <p><i class="fa-solid fa-phone me-3"></i>Hotline</p>
+                    <a class="nav-link" href="#">0121 323 756</a>
+                    <a class="nav-link" href="#">0767 985 386</a>
+                </div>
+            </div>
+            <div class="title col-md-3">
+                <div class="d-flex flex-column align-items-center">
+                    <p><i class="fa-solid fa-location-dot me-3"></i>Địa chỉ</p>
+                    <p class="text-justify">
+                        Số 12, Nguyễn Văn Bảo, <br> Phường 4, Quận Gò Vấp, <br> TP. Hồ Chí Minh
+                    </p>
+                </div>
+            </div>
+            <div class="title col-md-3">
+                <p><i class="fa-solid fa-globe me-3"></i>Mạng xã hội</p>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a href="#"><i class="fa-brands fa-facebook" id="icon-mxh"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i class="fa-brands fa-instagram" id="icon-mxh"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i class="fa-brands fa-youtube" id="icon-mxh"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i class="fa-brands fa-tiktok" id="icon-mxh"></i></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="title col-md-3">
+                <div class="d-flex flex-column align-items-center">
+                    <p><i class="fa-solid fa-handshake-angle me-3"></i>Hỗ trợ</p>
+                    <p class="text-justify">
+                        <a href="../html/sitemap.html" class="nav-link">Site map</a>
+                        <a href="../html/thanhvien.html" class="nav-link">Thành viên</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mở hộp thông báo thanh toán thành công và xóa giỏ hàng
+        function openPaymentBox() {
+            document.getElementById("paymentSuccess").style.display = "flex"; // Hiển thị thông báo thanh toán thành công
+
+            // Ẩn bảng giỏ hàng sau khi hiển thị thông báo
+            document.getElementById("datarow").style.display = "none"; // Ẩn sản phẩm trong giỏ hàng
+        }
+
+        // Đóng hộp thông báo thanh toán thành công
+        function closePaymentBox() {
+            document.getElementById("paymentSuccess").style.display = "none";
+        }
+
+        // Kiểm tra và hiển thị giỏ hàng từ localStorage
+        function loadCart() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let datarow = document.getElementById('datarow');
+            datarow.innerHTML = ''; // Clear current table content
+
+            cart.forEach((item, index) => {
+                let row = `
+                    <tr>
+                        <td>${index + 1}</td>
+                        <td><img src="${item.image}" alt="${item.title}" width="100"></td> <!-- Hiển thị ảnh sản phẩm -->
+                        <td>${item.title}</td> <!-- Hiển thị tên sản phẩm -->
+                        <td>${item.quantity}</td>
+                        <td>${item.price}</td>
+                        <td>${item.price * item.quantity}</td>
+                        <td><button class="btn btn-danger" onclick="removeItem(${index})">Xóa</button></td>
+                    </tr>
+                `;
+                datarow.innerHTML += row;
+            });
+        }
+
+        // Xóa sản phẩm khỏi giỏ hàng và hiển thị thông báo thành công
+        function removeItem(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let removedProduct = cart[index]; // Lưu lại thông tin sản phẩm sẽ bị xóa
+
+            cart.splice(index, 1); // Xóa phần tử ở vị trí index
+            localStorage.setItem('cart', JSON.stringify(cart)); // Cập nhật lại localStorage
+            loadCart(); // Tải lại giỏ hàng
+
+            // Hiển thị thông báo xóa thành công
+            alert(`Sản phẩm "${removedProduct.title}" đã bị xóa khỏi giỏ hàng!`);
+        }
+
+        // Thực thi khi trang được tải
+        window.onload = function() {
+            loadCart();
+        };
+
+        // Thêm sản phẩm vào giỏ hàng
+        function addToCart(event) {
+            // Lấy thông tin sản phẩm
+            let productTitle, productPrice, productImage, quantity;
+
+            // Kiểm tra nếu là sản phẩm chính hay sản phẩm liên quan
+            if (event.target.closest('.product-content')) {
+                productTitle = document.querySelector('.product-title').innerText;
+                productPrice = document.querySelector('.product-price span').innerText;
+                productImage = '../img/dogfood.png'; // Hình ảnh cố định cho sản phẩm chính
+                quantity = document.querySelector('.input').value;
+            } else {
+                const productCard = event.target.closest('.card-body');
+                productTitle = productCard.querySelector('.card-text').innerText;
+                productPrice = productCard.querySelector('.price_f').innerText;
+                productImage = '../img/dogfood.png'; // Hình ảnh cố định cho sản phẩm liên quan
+                quantity = 1; // Mặc định là 1 sản phẩm cho sản phẩm liên quan
+            }
+
+            // Kiểm tra nếu số lượng hợp lệ
+            if (quantity > 0) {
+                // Loại bỏ ký tự không phải số trong giá sản phẩm
+                const priceNumber = parseFloat(productPrice.replace(/[^\d.-]/g, ''));
+
+                if (!isNaN(priceNumber)) {
+                    // Tạo đối tượng sản phẩm
+                    const product = {
+                        title: productTitle,
+                        price: priceNumber,
+                        image: productImage,
+                        quantity: quantity
+                    };
+
+                    // Kiểm tra giỏ hàng trong localStorage
+                    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+                    // Kiểm tra nếu sản phẩm đã có trong giỏ hàng
+                    const existingProductIndex = cart.findIndex(item => item.title === productTitle);
+
+                    if (existingProductIndex !== -1) {
+                        // Nếu sản phẩm đã có, cập nhật số lượng
+                        cart[existingProductIndex].quantity = parseInt(cart[existingProductIndex].quantity) + parseInt(quantity);
+                    } else {
+                        // Nếu sản phẩm chưa có, thêm sản phẩm mới vào giỏ hàng
+                        cart.push(product);
+                    }
+
+                    // Lưu lại giỏ hàng vào localStorage
+                    localStorage.setItem('cart', JSON.stringify(cart));
+
+                    // Thông báo cho người dùng
+                    alert(`${quantity} sản phẩm "${productTitle}" đã được thêm vào giỏ hàng!`);
+                } else {
+                    alert('Giá sản phẩm không hợp lệ!');
+                }
+            } else {
+                alert('Vui lòng nhập số lượng sản phẩm!');
+            }
+        }
+        // Xử lý khi thanh toán thành công
+        function clearCartAndShowSummary() {
+            // Xóa giỏ hàng trong localStorage
+            localStorage.removeItem('cart');
+
+            // Ẩn hộp thanh toán
+            closePaymentBox();
+
+            // Tải lại trang và cập nhật thông tin tổng số sản phẩm và tổng tiền
+            loadCart();
+        }
+
+        // Thực thi khi trang được tải
+        window.onload = function() {
+            loadCart();
+        };
+    </script>
+</body>
+
+</html>

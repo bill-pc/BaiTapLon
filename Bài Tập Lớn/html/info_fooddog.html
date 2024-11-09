@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chi tiết thức ăn chó</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/info_fooddog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <!-------------------------------------------- header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="../img/Logo.png" alt="Logo" id="logo">
+                </a>
+
+                <!-- Nút collapse -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+                <!-- Menu -->
+                <div class="collapse navbar-collapse order-lg-1" id="navbarNav">
+                    <ul class="navbar-nav  ">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Trang chủ.html">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/Tin tức.html">Tin tức</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" data-toggle="dropdown">
+                            Danh mục sản phẩm
+                        </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item " href="../html/Thức ăn chó.html">
+                                        <i class="fa-solid fa-dog me-2"></i> Thức ăn chó
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../html/Thức ăn mèo.html">
+                                        <i class="fa-solid fa-cat me-2"></i> Thức ăn mèo
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../html/Thức ăn chuột.html">
+                                        <img src="../img/mouse.png" alt="" id="icon-mouse" class="me-2"> Thức ăn chuột
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../html/Thức ăn cá.html">
+                                        <i class="fa-solid fa-fish me-2"></i> Thức ăn cá
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../html/Thức ăn chim.html">
+                                        <i class="fa-solid fa-dove me-2"></i> Thức ăn chim
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/login.html">Đăng nhập</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/register.html">Đăng kí</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/cart.html">Giỏ hàng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/user.html">Người dùng</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Ô tìm kiếm-->
+                <div class="d-flex order-lg-2">
+                    <div class="input-group">
+                        <input type="text" name="search" id="search" class="form-control btn-search-custom" placeholder="Tìm kiếm...">
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="2000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../img/bg-header1.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/bg-header2.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/bg-header3.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/bg-header4.jpg" class="d-block w-100" alt="...">
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+            <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        </div>
+    </header>
+    <!-------------------------------------------- menu -->
+    <!-- img animals -->
+    <div class="container ">
+        <div class="d-flex justify-content-center">
+            <div class="img-animals">
+                <a href="../html/Thức ăn chó.html">
+                    <img src="../img/dog.png" alt="" id="active-img">
+                    <p>Thức ăn chó</p>
+                </a>
+            </div>
+            <div class="img-animals">
+                <a href="../html/Thức ăn mèo.html">
+                    <img src="../img/cat.png" alt="">
+                    <p>Thức ăn mèo</p>
+                </a>
+            </div>
+            <div class="img-animals">
+                <a href="../html/Thức ăn chuột.html">
+                    <img src="../img/hamster.png" alt="">
+                    <p>Thức ăn chuột</p>
+                </a>
+            </div>
+            <div class="img-animals">
+                <a href="../html/Thức ăn cá.html">
+                    <img src="../img/fish.png" alt="">
+                    <p>Thức ăn cá</p>
+                </a>
+            </div>
+            <div class="img-animals">
+                <a href="../html/Thức ăn chim.html">
+                    <img src="../img/bird.png" alt="">
+                    <p>Thức ăn chim</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="card-wrapper">
+        <div class="card">
+            <!-- card left -->
+            <div class="product-imgs">
+                <div class="img-display">
+                    <div class="img-showcase">
+                        <img src="../img/dogfood.png" alt="shoe image">
+                    </div>
+                </div>
+            </div>
+            <!-- card right -->
+            <div class="product-content">
+                <h5 class="product-title">Thức ăn chó</h5>
+                <a href="../html/Trang chủ.html" class="product-link">Về trang chủ</a>
+                <div class="product-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+
+                    <span>4.8(21) </span>
+                </div>
+                <div class="product-price">
+                    <p class="price">Price: <span>280.000đ</span></p>
+                </div>
+
+                <div class="product-detail">
+                    <h2>Chi tiết sản phẩm: </h2>
+                    <p>Lợi ích chính JERHIGH Meat as Meals Chicken Recipe với nguồn nguyên liệu tươi ngon và đảm bảo, mang lại cho thú cưng những giá trị dinh dưỡng thật nhất. </p>
+                    <p>Thành phần dinh dưỡng Thức ăn hạt mềm cho chó vị thịt gà JERHIGH Meat as Meals Chicken Recipe với công thức từ thịt gà tươi mang lại cho thú cưng những giá trị dinh dưỡng tốt nhất.</p>
+                    <ul>
+
+
+                        <li>Loại: <span>Hạt ăn dinh dưỡng</span></li>
+                        <li>Shipping: <span>Toàn Quốc</span></li>
+                        <li>Phí ship: <span>Free</span></li>
+                    </ul>
+                </div>
+
+                <div class="purchase-info">
+                    <input type="number" min="0" value="1" max="15" class="input">
+                    <button type="button" class="btn">
+              Thêm vào giỏ hàng <i class = "fas fa-shopping-cart"></i>
+            </button>
+
+                </div>
+
+                <div class="social-links">
+                    <p>Share At: </p>
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- sản phẩm liên quan-->
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-3">
+                <h4 class="title">Sản phẩm liên quan</h4>
+            </div>
+            <div class="col-7"></div>
+            <div class="col-md-2">
+                <div class="title text-end mt-2">
+                    <a class="text-decoration-none" href="../html/Thức ăn chó.html">Xem tất cả >></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!-- product row 1 -->
+        <div class="row row-cols-2 row-cols-md-4 g-4 mt-4">
+            <div class="col">
+                <div class="card">
+                    <a href="../html/info_fooddog.html"><img src="../img/dogfood.png" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                        <p class="card-text">Thức ăn cho chó con vị thịt gà PURINA PRO PLAN Kitten..</p>
+                        <div class="d-flex justify-content-between text-secondary ">
+                            <p>4.8 <i class="fa-solid fa-star"></i></p>
+                            <p>Lượt bán: 1.2k</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="price_f">280.000đ</p>
+                            </div>
+                            <div class="col-2"></div>
+                            <div class="col-4" id="icon-shopping">
+                                <button type="submit"><i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <a href="../html/info_foodmouse.html"><img src="../img/mousefood.png" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                        <p class="card-text">Thức ăn cho chuột vị thịt gà PURINA PRO PLAN Kitten.</p>
+                        <div class="d-flex justify-content-between text-secondary ">
+                            <p>4.8 <i class="fa-solid fa-star"></i></p>
+                            <p>Lượt bán: 1.2k</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="price_f">280.000đ</p>
+                            </div>
+                            <div class="col-2"></div>
+                            <div class="col-4" id="icon-shopping">
+                                <button type="submit"><i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <a href="../html/info_foodbird.html"><img src="../img/birdfood.png" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                        <p class="card-text">Thức ăn cho chim vị thịt gà PURINA PRO PLAN Kitten..</p>
+                        <div class="d-flex justify-content-between text-secondary ">
+                            <p>4.8 <i class="fa-solid fa-star"></i></p>
+                            <p>Lượt bán: 1.2k</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="price_f">280.000đ</p>
+                            </div>
+                            <div class="col-2"></div>
+                            <div class="col-4" id="icon-shopping">
+                                <button type="submit"><i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <a href="../html/info_foodcat.html"><img src="../img/catfood.png" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                        <p class="card-text">Thức ăn cho mèo con vị thịt gà PURINA PRO PLAN Kitten..</p>
+                        <div class="d-flex justify-content-between text-secondary ">
+                            <p>4.8 <i class="fa-solid fa-star"></i></p>
+                            <p>Lượt bán: 1.2k</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="price_f">280.000đ</p>
+                            </div>
+                            <div class="col-2"></div>
+                            <div class="col-4" id="icon-shopping">
+                                <button type="submit"><i class="fa-solid fa-cart-shopping"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------------------------------footer -->
+    <footer class="container-fluid">
+        <div class="row text-center row-cols-2 row-cols-md-4">
+            <div class="title col-md-3">
+                <div class="d-flex flex-column">
+                    <p><i class="fa-solid fa-phone me-3"></i>Hotline</p>
+                    <a class="nav-link" href="#">0121 323 756</a>
+                    <a class="nav-link" href="#">0767 985 386</a>
+                </div>
+            </div>
+            <div class="title col-md-3">
+                <div class="d-flex flex-column align-items-center">
+                    <p><i class="fa-solid fa-location-dot me-3"></i>Địa chỉ</p>
+                    <p class="text-justify">
+                        Số 12, Nguyễn Văn Bảo, <br> Phường 4, Quận Gò Vấp, <br> TP. Hồ Chí Minh
+                    </p>
+                </div>
+            </div>
+            <div class="title col-md-3">
+                <p><i class="fa-solid fa-globe me-3"></i>Mạng xã hội</p>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a href="#"><i class="fa-brands fa-facebook" id="icon-mxh"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i class="fa-brands fa-instagram" id="icon-mxh"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i class="fa-brands fa-youtube" id="icon-mxh"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i class="fa-brands fa-tiktok" id="icon-mxh"></i></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="title col-md-3">
+                <div class="d-flex flex-column align-items-center">
+                    <p><i class="fa-solid fa-handshake-angle me-3"></i>Hỗ trợ</p>
+                    <p class="text-justify">
+                        <a href="../html/sitemap.html" class="nav-link">Site map</a>
+                        <a href="../html/thanhvien.html" class="nav-link">Thành viên</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Nút "Thêm vào giỏ hàng" cho sản phẩm chính
+            const addToCartBtn = document.querySelector('.btn');
+            if (addToCartBtn) {
+                addToCartBtn.addEventListener('click', addToCart);
+            }
+
+            // Nút "Thêm vào giỏ hàng" cho các sản phẩm liên quan
+            const relatedProductBtns = document.querySelectorAll('.card button[type="submit"]');
+            relatedProductBtns.forEach(btn => {
+                btn.addEventListener('click', addToCart);
+            });
+
+            function addToCart(event) {
+                // Lấy thông tin sản phẩm
+                let productTitle, productPrice, productImage, quantity;
+
+                // Kiểm tra nếu là sản phẩm chính hay sản phẩm liên quan
+                if (event.target.closest('.product-content')) {
+                    productTitle = document.querySelector('.product-title').innerText;
+                    productPrice = document.querySelector('.product-price span').innerText;
+                    productImage = '../img/dogfood.png'; // Hình ảnh cố định cho sản phẩm chính
+                    quantity = document.querySelector('.input').value;
+                } else {
+                    const productCard = event.target.closest('.card-body');
+                    productTitle = productCard.querySelector('.card-text').innerText;
+                    productPrice = productCard.querySelector('.price_f').innerText;
+                    productImage = '../img/dogfood.png'; // Hình ảnh cố định cho sản phẩm liên quan
+                    quantity = 1; // Mặc định là 1 sản phẩm cho sản phẩm liên quan
+                }
+
+                // Kiểm tra nếu số lượng hợp lệ
+                if (quantity > 0) {
+                    // Loại bỏ ký tự không phải số trong giá sản phẩm
+                    const priceNumber = parseInt(productPrice.replace(/[^\d]/g, ''));
+
+
+                    if (!isNaN(priceNumber)) {
+                        // Tạo đối tượng sản phẩm
+                        const product = {
+                            title: productTitle,
+                            price: priceNumber,
+                            image: productImage,
+                            quantity: quantity
+                        };
+
+                        // Kiểm tra giỏ hàng trong localStorage
+                        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+                        // Kiểm tra nếu sản phẩm đã có trong giỏ hàng
+                        const existingProductIndex = cart.findIndex(item => item.title === productTitle);
+
+                        if (existingProductIndex !== -1) {
+                            // Nếu sản phẩm đã có, cập nhật số lượng
+                            cart[existingProductIndex].quantity = parseInt(cart[existingProductIndex].quantity) + parseInt(quantity);
+                        } else {
+                            // Nếu sản phẩm chưa có, thêm sản phẩm mới vào giỏ hàng
+                            cart.push(product);
+                        }
+
+                        // Lưu lại giỏ hàng vào localStorage
+                        localStorage.setItem('cart', JSON.stringify(cart));
+
+                        // Thông báo cho người dùng
+                        alert(`${quantity} sản phẩm "${productTitle}" đã được thêm vào giỏ hàng!`);
+                    } else {
+                        alert('Giá sản phẩm không hợp lệ!');
+                    }
+                } else {
+                    alert('Vui lòng nhập số lượng sản phẩm!');
+                }
+            }
+        });
+    </script>
+    <script src="../js/info_food.js"></script>
+</body>
+
+</html>

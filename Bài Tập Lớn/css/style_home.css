@@ -1,0 +1,223 @@
+
+@keyframes zoom {
+    0% { transform: scale(1.02); }       
+    50% { transform: scale(1.05); }     
+    100% { transform: scale(1.02); }     
+}
+
+body{
+    font-family: Arial;
+}
+.active{
+    border-bottom: 3px solid white;
+}
+/* header */
+header{
+    min-height: 400px;
+    height: auto;
+    position: relative;
+}
+ .carousel-inner{
+    height: 450px;
+}
+/* .bg-ul {
+    background-color: rgba(0, 0, 0, 0.7);
+} */
+.navbar-brand{
+    width: 30%;
+}
+.navbar{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+}
+#navbarNav{
+    width: 70%;
+}
+#logo {
+    width: 50%; 
+    max-width: 50%; 
+    height: auto; 
+}
+
+header .nav-link{
+    font-size: 17px;
+    color: grey;
+}
+.navbar .navbar-nav .nav-item:hover>.nav-link{
+    color: white;
+}
+.dropdown-menu{
+    background-color: white;
+}
+#icon-mouse{
+    width: 18px;
+    height: auto;
+}
+
+.btn-search-custom{
+    border-radius: 30px;
+}
+
+/* end header */
+
+/* container content 1*/
+.container {
+    width: 1200px;
+}
+.content-1 {
+    margin-top: 50px;
+    font-size: 18px;
+    height: auto;
+    width: 100%;
+    padding: 20px 20px;
+    background-image: url(../img/bg-2.png);
+    background-size: cover;
+    border-radius: 10px;
+}
+/* .content-1 p{
+    padding: 10px 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+} */
+.text-justify {
+    text-align: justify;
+}
+
+.text-center {
+    font-weight: 700;
+}
+
+#carouselExampleControls .carousel-inner img{
+    margin-top: 50px;
+    height: 400px;
+    width: 400px;
+    object-fit: contain;
+}
+
+/* end container content 1*/
+
+/* container content 2 */
+#food-content-2{
+    margin-top: 50px;
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+}
+.content-2 {
+    margin-top: 50px;
+    font-size: 18px;
+    height: auto;
+    width: 100%;
+    padding: 20px 20px;
+    background-color: rgb(244, 244, 244);
+    border-radius: 10px;
+}
+.content-2 .title p{
+    font-size: 26px;
+    text-align: center; 
+
+}
+.content-2 .hr{
+    width: 40%;
+    margin: 0px auto;
+    border-top: 5px solid rgb(0, 255, 0);
+    margin-top: 30px;
+}
+.content-2 p{
+    margin-top: 50px;
+    text-align: center;
+    font-weight: 700;
+}
+.fa-check{
+    color: white;
+    background-color: rgb(71, 245, 71);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+/* end container content 2 */
+
+
+/* container product */
+.card:hover {
+    transform: scale(1.05); 
+    transition: transform 0.3s ease-in-out; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    font-weight: 500;
+} 
+.icon-img-3 {
+    height: 30px;
+    margin-left: 20px;
+}
+.icon-rating {
+    width: 18px;
+    height: 18px;
+    margin-bottom: 8px;
+    margin-left: 5px;
+    margin-right: 40px;
+}
+#icon-shopping button {
+    border: none;
+    background-color: white;
+}
+#icon-shopping button i{
+    font-size: 30px;
+}
+#icon-shopping button:hover>i{
+    text-shadow: 2px 2px 3px grey;
+}
+.price{
+    color: red;
+    font-weight: 500;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.container .title{
+    font-weight: 700;
+}
+/* end container product */
+
+
+/* container Giới thiệu trước footer*/
+#img-food{
+    width: 80%;
+    height: auto;
+    margin-top: 45px;
+    margin: 5% 15%;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+}
+/* ------footer */
+footer{
+    margin-top: 70px;
+    background-image: url(../img/bg-footer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 250px;
+    height: auto;
+}
+footer .title{
+    margin-top: 50px;
+}
+footer .title p,
+footer .title a{
+    color: white;
+    font-weight: lighter;
+}
+footer #icon-mxh{
+    font-size: 25px;
+    color: white;
+}
+footer .nav-item{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/* end footer */

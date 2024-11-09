@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/dangnhap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        #wrapper {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #formRegister {
+            max-width: 500px;
+            background: rgba(223, 228, 234, 0.8);
+            flex-grow: 1;
+            padding: 30px 30px 40px;
+            box-shadow: 0px 0px 17px 2px rgba(255, 255, 255, 0.6)
+        }
+    </style>
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="../img/Logo.png" alt="Logo" id="logo">
+            </a>
+            <!-- Nút collapse -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse order-lg-1" id="navbarNav">
+                <ul class="navbar-nav  ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/Trang chủ.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/Tin tức.html">Tin tức</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            Danh mục sản phẩm
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="../html/Thức ăn chó.html">
+                                    <i class="fa-solid fa-dog me-2"></i> Thức ăn chó
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="../html/Thức ăn mèo.html">
+                                    <i class="fa-solid fa-cat me-2"></i> Thức ăn mèo
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="../html/Thức ăn chuột.html">
+                                    <img src="../img/mouse.png" alt="" id="icon-mouse" class="me-2"> Thức ăn chuột
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="../html/Thức ăn cá.html">
+                                    <i class="fa-solid fa-fish me-2"></i> Thức ăn cá
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="../html/Thức ăn chim.html">
+                                    <i class="fa-solid fa-dove me-2"></i> Thức ăn chim
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="./login.html">Đăng nhập</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./register.html">Đăng kí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/cart.html">Giỏ hàng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/user.html">Người dùng</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Ô tìm kiếm-->
+            <div class="d-flex order-lg-2">
+                <div class="input-group">
+                    <input type="text" name="search" id="search" class="form-control btn-search-custom" placeholder="Tìm kiếm...">
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="carouselExampleControls-2" class="carousel slide" data-ride="carousel" data-interval="2000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../img/bg-header1.png" class="d-block w-100 img-hder" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="../img/bg-header2.png" class="d-block w-100 img-hder" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="../img/bg-header3.jpg" class="d-block w-100 img-hder" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="../img/bg-header4.jpg" class="d-block w-100 img-hder" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</header>
+
+<body>
+    <div id="wrapper" style="height: 100vh" class="container d-flex justify-content-center align-items-center">
+        <form id="formRegister" style="width: 400px " style="background-color: red;">
+            <h3 class="text-center">ĐĂNG KÝ TÀI KHOẢN</h3>
+            <div class="mb-3">
+                <label for="userName" class="form-label">Họ và Tên</label>
+                <input type="text" class="form-control" id="userName" placeholder="Nhập họ và tên">
+                <div id="userNameError" style="color:red; display: none">Tên không được để trống</div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" class="form-control" id="email" placeholder="Nhập Email">
+                <div id="emailError" style="color:red; display: none">Email không được để trống</div>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Mật Khẩu</label>
+                <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu">
+                <div id="passwordError" style="color:red; display: none">Mật khẩu không được để trống</div>
+            </div>
+            <div class="mb-3">
+                <label for="address" class="form-label">Địa chỉ</label>
+                <textarea class="form-control" id="address" rows="3"></textarea>
+            </div>
+            <div>
+                <button type="submit" style="width:100%" class="btn btn-primary">ĐĂNG KÝ</button>
+            </div>
+            <p class="text-center mt-2">
+                <!-- màu chữ xem lại -->
+                Bạn đã có tài khoản? <a href="../html/login.html">Đăng Nhập</a>
+            </p>
+        </form>
+    </div>
+    <footer class="container-fluid">
+        <div class="row text-center row-cols-2 row-cols-md-4">
+            <div class="title col-md-3">
+                <div class="d-flex flex-column">
+                    <p><i class="fa-solid fa-phone me-3"></i>Hotline</p>
+                    <a class="nav-link" href="#">0121 323 756</a>
+                    <a class="nav-link" href="#">0767 985 386</a>
+                </div>
+            </div>
+            <div class="title col-md-3">
+                <div class="d-flex flex-column align-items-center">
+                    <p><i class="fa-solid fa-location-dot me-3"></i>Địa chỉ</p>
+                    <p class="text-justify">
+                        Số 12, Nguyễn Văn Bảo, <br> Phường 4, Quận Gò Vấp, <br> TP. Hồ Chí Minh
+                    </p>
+                </div>
+            </div>
+            <div class="title col-md-3">
+                <p><i class="fa-solid fa-globe me-3"></i>Mạng xã hội</p>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a href="#"><i class="fa-brands fa-facebook" id="icon-mxh"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i class="fa-brands fa-instagram" id="icon-mxh"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i class="fa-brands fa-youtube" id="icon-mxh"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i class="fa-brands fa-tiktok" id="icon-mxh"></i></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="title col-md-3">
+                <div class="d-flex flex-column align-items-center">
+                    <p><i class="fa-solid fa-handshake-angle me-3"></i>Hỗ trợ</p>
+                    <p class="text-justify">
+                        <a href="../html/sitemap.html" class="nav-link">Site map</a>
+                        <a href="../html/thanhvien.html" class="nav-link">Thành viên</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- script -->
+    <script src="../js/register.js"></script>
+</body>
+
+</html>

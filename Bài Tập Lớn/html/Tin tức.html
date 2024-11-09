@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin tức</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/tin_tuc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../html/Trang chủ.html">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="../img/Logo.png" alt="Logo" id="logo">
+                </a>
+                <!-- Nút collapse -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menu -->
+                <div class="collapse navbar-collapse order-lg-1" id="navbarNav">
+                    <ul class="navbar-nav  ">
+                        <li class="nav-item">
+                            <a class="nav-link " href="Trang chủ.html">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../html/Tin tức.html">Tin tức</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                                Danh mục sản phẩm
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="../html/Thức ăn chó.html">
+                                        <i class="fa-solid fa-dog me-2"></i> Thức ăn chó
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../html/Thức ăn mèo.html">
+                                        <i class="fa-solid fa-cat me-2"></i> Thức ăn mèo
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../html/Thức ăn chuột.html">
+                                        <img src="../img/mouse.png" alt="" id="icon-mouse" class="me-2"> Thức ăn chuột
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../html/Thức ăn cá.html">
+                                        <i class="fa-solid fa-fish me-2"></i> Thức ăn cá
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="../html/Thức ăn chim.html">
+                                        <i class="fa-solid fa-dove me-2"></i> Thức ăn chim
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/login.html">Đăng nhập</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/register.html">Đăng kí</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/cart.html">Giỏ hàng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/user.html">Người dùng</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Ô tìm kiếm-->
+                <div class="d-flex order-lg-2">
+                    <div class="input-group">
+                        <input type="text" name="search" id="search" class="form-control btn-search-custom" placeholder="Tìm kiếm...">
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="carouselExampleControls-2" class="carousel slide" data-ride="carousel" data-interval="2000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../img/bg-header1.png" class="d-block w-100 img-hder" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/bg-header2.png" class="d-block w-100 img-hder" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/bg-header3.jpg" class="d-block w-100 img-hder" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/bg-header4.jpg" class="d-block w-100 img-hder" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+    <!-- tin tức mới nhất -->
+    <div class="container">
+        <div class="title-1">
+            <h2>Tin tức mới nhất</h2>
+            <hr>
+        </div>
+        <div class="content-1">
+            <div class="row row-cols-1 row-cols-md-2 g-4" style="margin-left: 8%;">
+                <div class="col">
+                    <div class="card" style="width: 80%;">
+                        <img src="../img/tintuc1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">25 bài học huấn luyện chó tại nhà ai cũng làm được</h5>
+                            <p class="card-text">Huấn luyện chó tại nhà không chỉ giúp tăng cường mối quan hệ giữa chó và chủ, mà còn giúp chó phát triển tốt hơn về tâm lý và hành vi...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 80%;">
+                        <img src="../img/tintuc2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">3 lý do hãy dừng lại nếu bạn đang cho chó mèo ăn chay</h5>
+                            <p class="card-text">Hãy dừng ngay lại việc cho chó mèo ăn chay hoặc rau củ quả với hàm lượng lớn trong một thời gian dài...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 80%;">
+                        <img src="../img/tintuc3.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Phải làm sao khi chó bị đau chân và đi khập khiễng?</h5>
+                            <p class="card-text">Chó bị đau chân cà nhắc có thể do nhiều nguyên nhân bởi loài chó rất hiếu động, chúng luôn muốn được chạy nhảy và vui đùa mọi lúc mọi nơi...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 80%;">
+                        <img src="../img/tintuc4.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">6 kinh nghiệm cách chăm sóc chó mẹ sau sinh mổ đẻ</h5>
+                            <p class="card-text">Chăm sóc chó mẹ sau sinh thường hoặc mổ đẻ là việc làm rất quan trọng. Nhất là với người nuôi chó sinh sản...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 g-4" style="margin-left: 8%;">
+                <div class="col">
+                    <div class="card" style="width: 80%;">
+                        <img src="../img/tintuc5.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Cách chăm sóc chó mang thai tại nhà cần phải biết</h5>
+                            <p class="card-text">Việc chăm sóc chó mang thai tại nhà cũng không hề đơn giản. Nếu bạn không có kiến thức cũng như sự chuẩn bị kỹ càng thì việc sinh đẻ tự nhiên của chó có nguy cơ tử vong cao...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 80%;">
+                        <img src="../img/tintuc6.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Chỉ từng bước cách cắt móng cho mèo dễ dàng</h5>
+                            <p class="card-text">Cắt móng cho mèo không chỉ giúp giữ cho đồ vật trong nhà của bạn khỏi bị trầy xước mà còn là một phần quan trọng...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- đọc nhiều nhất -->
+    <div class="container">
+        <div class="title-1">
+            <h2>Tin tức đọc nhiều nhất</h2>
+            <hr>
+        </div>
+        <div class="content-1">
+            <div class="row row-cols-1 row-cols-md-2 g-4" style="margin-left: 8%;">
+                <div class="col">
+                    <div class="card" style="width: 80%;">
+                        <img src="../img/tintuc7.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">15 loại thuốc nhỏ mắt cho mèo được thú y khuyên dùng</h5>
+                            <p class="card-text">Trên thị trường hiện có nhiều loại thuốc nhỏ mắt cho mèo để lựa chọn dù mắt mèo của bạn bị khô, nhiễm trùng, hay dị ứng...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 80%;">
+                        <img src="../img/tintuc8.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Cách đặt tên cho mèo Tiếng Việt ý nghĩa phong thủy</h5>
+                            <p class="card-text">Đặt tên cho mèo Tiếng Việt là nghệ thuật kết hợp sở thích cá nhân với nền văn hóa Việt Nam...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 80%;">
+                        <img src="../img/tintuc9.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Chuột Hamster ăn gì? 8 loại thức ăn cho chuột Hamster</h5>
+                            <p class="card-text">Lựa chọn thức ăn cho chuột Hamster phù hợp là một phần quan trọng đảm bảo sức khỏe và hạnh phúc cho chúng...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 80%;">
+                        <img src="../img/tintuc10.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Cách làm setup bể cá thủy sinh mini đơn giản mà lại đẹp</h5>
+                            <p class="card-text">Làm thế nào để xây dựng một bể cá thủy sinh mini cực đẹp và ấn tượng. Chắc hẳn ai nuôi cá cũng đều...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 g-4" style="margin-left: 8%;">
+                <div class="col">
+                    <div class="card" style="width: 80%;">
+                        <img src="../img/tintuc5.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Cách chăm sóc chó mang thai tại nhà cần phải biết</h5>
+                            <p class="card-text">Việc chăm sóc chó mang thai tại nhà cũng không hề đơn giản. Nếu bạn không có kiến thức cũng như sự chuẩn bị kỹ càng thì việc sinh đẻ tự nhiên của chó có nguy cơ tử vong cao...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 80%;">
+                        <img src="../img/tintuc6.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Chỉ từng bước cách cắt móng cho mèo dễ dàng</h5>
+                            <p class="card-text">Cắt móng cho mèo không chỉ giúp giữ cho đồ vật trong nhà của bạn khỏi bị trầy xước mà còn là một phần quan trọng...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid">
+        <div class="row text-center row-cols-2 row-cols-md-4">
+            <div class="title col-md-3">
+                <div class="d-flex flex-column">
+                    <p><i class="fa-solid fa-phone me-3"></i>Hotline</p>
+                    <a class="nav-link" href="#">0121 323 756</a>
+                    <a class="nav-link" href="#">0767 985 386</a>
+                </div>
+            </div>
+            <div class="title col-md-3">
+                <div class="d-flex flex-column align-items-center">
+                    <p><i class="fa-solid fa-location-dot me-3"></i>Địa chỉ</p>
+                    <p class="text-justify">
+                        Số 12, Nguyễn Văn Bảo, <br> Phường 4, Quận Gò Vấp, <br> TP. Hồ Chí Minh
+                    </p>
+                </div>
+            </div>
+            <div class="title col-md-3">
+                <p><i class="fa-solid fa-globe me-3"></i>Mạng xã hội</p>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a href="#"><i class="fa-brands fa-facebook" id="icon-mxh"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i class="fa-brands fa-instagram" id="icon-mxh"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i class="fa-brands fa-youtube" id="icon-mxh"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#"><i class="fa-brands fa-tiktok" id="icon-mxh"></i></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="title col-md-3">
+                <div class="d-flex flex-column align-items-center">
+                    <p><i class="fa-solid fa-handshake-angle me-3"></i>Hỗ trợ</p>
+                    <p class="text-justify">
+                        <a href="../html/sitemap.html" class="nav-link">Site map</a>
+                        <a href="../html/thanhvien.html" class="nav-link">Thành viên</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

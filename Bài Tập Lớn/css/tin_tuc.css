@@ -1,0 +1,86 @@
+body{
+    font-family: Arial;
+}
+.active{
+    border-bottom: 3px solid white;
+}
+/* header */
+header{
+    min-height: 400px;
+    height: auto;
+    position: relative;
+}
+ .carousel-inner{
+    height: 450px;
+}
+/* .bg-ul {
+    background-color: rgba(0, 0, 0, 0.7);
+} */
+.navbar-brand{
+    width: 30%;
+}
+.navbar{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+}
+#navbarNav{
+    width: 70%;
+}
+#logo {
+    width: 50%; 
+    max-width: 50%; 
+    height: auto; 
+}
+
+header .nav-link{
+    font-size: 17px;
+    color: grey;
+}
+.navbar .navbar-nav .nav-item:hover>.nav-link{
+    color: white;
+}
+.dropdown-menu{
+    background-color: white;
+}
+#icon-mouse{
+    width: 18px;
+    height: auto;
+}
+
+.btn-search-custom{
+    border-radius: 30px;
+}
+
+/* end header */
+
+/* container tin tức mới  nhất */
+.title-1 h2{
+    margin-top: 50px;
+    font-weight: bolder;
+}
+footer{
+    margin-top: 70px;
+    background-image: url(../img/bg-footer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 250px;
+    height: auto;
+}
+footer .title{
+    margin-top: 50px;
+}
+footer .title p,
+footer .title a{
+    color: white;
+    font-weight: lighter;
+}
+footer #icon-mxh{
+    font-size: 25px;
+    color: white;
+}
+footer .nav-item{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/* end footer */
