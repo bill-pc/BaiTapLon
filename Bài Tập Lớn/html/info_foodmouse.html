@@ -21,17 +21,17 @@
                 <a class="navbar-brand" href="#">
                     <img src="../img/Logo.png" alt="Logo" id="logo">
                 </a>
-    
+
                 <!-- Nút collapse -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-    
+
                 <!-- Menu -->
                 <div class="collapse navbar-collapse order-lg-1" id="navbarNav">
                     <ul class="navbar-nav  ">
                         <li class="nav-item">
-                            <a class="nav-link" href="Trang chủ.html">Trang chủ</a>
+                            <a class="nav-link" href="index.html">Trang chủ</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../html/Tin tức.html">Tin tức</a>
@@ -82,7 +82,7 @@
                         </li>
                     </ul>
                 </div>
-    
+
                 <!-- Ô tìm kiếm-->
                 <div class="d-flex order-lg-2">
                     <div class="input-group">
@@ -105,7 +105,7 @@
                 <div class="carousel-item">
                     <img src="../img/bg-header4.jpg" class="d-block w-100" alt="...">
                 </div>
-    
+
             </div>
             <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -166,7 +166,7 @@
             <!-- card right -->
             <div class="product-content">
                 <h2 class="product-title">Thức ăn chuột</h2>
-                <a href="../html/Trang chủ.html" class="product-link">Về trang chủ</a>
+                <a href="../html/index.html" class="product-link">Về trang chủ</a>
                 <div class="product-rating">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -367,84 +367,84 @@
             </div>
         </div>
     </footer>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                // Nút "Thêm vào giỏ hàng" cho sản phẩm chính
-                const addToCartBtn = document.querySelector('.btn');
-                if (addToCartBtn) {
-                    addToCartBtn.addEventListener('click', addToCart);
-                }
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Nút "Thêm vào giỏ hàng" cho sản phẩm chính
+            const addToCartBtn = document.querySelector('.btn');
+            if (addToCartBtn) {
+                addToCartBtn.addEventListener('click', addToCart);
+            }
 
-                // Nút "Thêm vào giỏ hàng" cho các sản phẩm liên quan
-                const relatedProductBtns = document.querySelectorAll('.card button[type="submit"]');
-                relatedProductBtns.forEach(btn => {
-                    btn.addEventListener('click', addToCart);
-                });
-
-                function addToCart(event) {
-                    // Lấy thông tin sản phẩm
-                    let productTitle, productPrice, productImage, quantity;
-
-                    // Kiểm tra nếu là sản phẩm chính hay sản phẩm liên quan
-                    if (event.target.closest('.product-content')) {
-                        productTitle = document.querySelector('.product-title').innerText;
-                        productPrice = document.querySelector('.product-price span').innerText;
-                        productImage = '../img/mousefood.png'; // Hình ảnh cố định cho sản phẩm chính
-                        quantity = document.querySelector('.input').value;
-                    } else {
-                        const productCard = event.target.closest('.card-body');
-                        productTitle = productCard.querySelector('.card-text').innerText;
-                        productPrice = productCard.querySelector('.price_f').innerText;
-                        productImage = '../img/mousefood.png'; // Hình ảnh cố định cho sản phẩm liên quan
-                        quantity = 1; // Mặc định là 1 sản phẩm cho sản phẩm liên quan
-                    }
-
-                    // Kiểm tra nếu số lượng hợp lệ
-                    if (quantity > 0) {
-                        // Loại bỏ ký tự không phải số trong giá sản phẩm
-                        const priceNumber = parseInt(productPrice.replace(/[^\d]/g, ''));
-
-
-                        if (!isNaN(priceNumber)) {
-                            // Tạo đối tượng sản phẩm
-                            const product = {
-                                title: productTitle,
-                                price: priceNumber,
-                                image: productImage,
-                                quantity: quantity
-                            };
-
-                            // Kiểm tra giỏ hàng trong localStorage
-                            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-                            // Kiểm tra nếu sản phẩm đã có trong giỏ hàng
-                            const existingProductIndex = cart.findIndex(item => item.title === productTitle);
-
-                            if (existingProductIndex !== -1) {
-                                // Nếu sản phẩm đã có, cập nhật số lượng
-                                cart[existingProductIndex].quantity = parseInt(cart[existingProductIndex].quantity) + parseInt(quantity);
-                            } else {
-                                // Nếu sản phẩm chưa có, thêm sản phẩm mới vào giỏ hàng
-                                cart.push(product);
-                            }
-
-                            // Lưu lại giỏ hàng vào localStorage
-                            localStorage.setItem('cart', JSON.stringify(cart));
-
-                            // Thông báo cho người dùng
-                            alert(`${quantity} sản phẩm "${productTitle}" đã được thêm vào giỏ hàng!`);
-                        } else {
-                            alert('Giá sản phẩm không hợp lệ!');
-                        }
-                    } else {
-                        alert('Vui lòng nhập số lượng sản phẩm!');
-                    }
-                }
+            // Nút "Thêm vào giỏ hàng" cho các sản phẩm liên quan
+            const relatedProductBtns = document.querySelectorAll('.card button[type="submit"]');
+            relatedProductBtns.forEach(btn => {
+                btn.addEventListener('click', addToCart);
             });
-        </script>
+
+            function addToCart(event) {
+                // Lấy thông tin sản phẩm
+                let productTitle, productPrice, productImage, quantity;
+
+                // Kiểm tra nếu là sản phẩm chính hay sản phẩm liên quan
+                if (event.target.closest('.product-content')) {
+                    productTitle = document.querySelector('.product-title').innerText;
+                    productPrice = document.querySelector('.product-price span').innerText;
+                    productImage = '../img/mousefood.png'; // Hình ảnh cố định cho sản phẩm chính
+                    quantity = document.querySelector('.input').value;
+                } else {
+                    const productCard = event.target.closest('.card-body');
+                    productTitle = productCard.querySelector('.card-text').innerText;
+                    productPrice = productCard.querySelector('.price_f').innerText;
+                    productImage = '../img/mousefood.png'; // Hình ảnh cố định cho sản phẩm liên quan
+                    quantity = 1; // Mặc định là 1 sản phẩm cho sản phẩm liên quan
+                }
+
+                // Kiểm tra nếu số lượng hợp lệ
+                if (quantity > 0) {
+                    // Loại bỏ ký tự không phải số trong giá sản phẩm
+                    const priceNumber = parseInt(productPrice.replace(/[^\d]/g, ''));
 
 
-        <script src="../js/info_food.js"></script>
+                    if (!isNaN(priceNumber)) {
+                        // Tạo đối tượng sản phẩm
+                        const product = {
+                            title: productTitle,
+                            price: priceNumber,
+                            image: productImage,
+                            quantity: quantity
+                        };
+
+                        // Kiểm tra giỏ hàng trong localStorage
+                        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+                        // Kiểm tra nếu sản phẩm đã có trong giỏ hàng
+                        const existingProductIndex = cart.findIndex(item => item.title === productTitle);
+
+                        if (existingProductIndex !== -1) {
+                            // Nếu sản phẩm đã có, cập nhật số lượng
+                            cart[existingProductIndex].quantity = parseInt(cart[existingProductIndex].quantity) + parseInt(quantity);
+                        } else {
+                            // Nếu sản phẩm chưa có, thêm sản phẩm mới vào giỏ hàng
+                            cart.push(product);
+                        }
+
+                        // Lưu lại giỏ hàng vào localStorage
+                        localStorage.setItem('cart', JSON.stringify(cart));
+
+                        // Thông báo cho người dùng
+                        alert(`${quantity} sản phẩm "${productTitle}" đã được thêm vào giỏ hàng!`);
+                    } else {
+                        alert('Giá sản phẩm không hợp lệ!');
+                    }
+                } else {
+                    alert('Vui lòng nhập số lượng sản phẩm!');
+                }
+            }
+        });
+    </script>
+
+
+    <script src="../js/info_food.js"></script>
 </body>
 
 </html>
