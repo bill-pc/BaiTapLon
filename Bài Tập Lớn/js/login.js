@@ -19,7 +19,7 @@ formLogin.addEventListener("submit", function(e) {
         // Lưu thông tin user vào localStorage để sử dụng trong trang user
         localStorage.setItem("currentUser", JSON.stringify(findUser));
         alert("Đăng nhập thành công!");
-        window.location.href = "Trang chủ.html";
+        window.location.href = "index.html";
     }
 
 });
